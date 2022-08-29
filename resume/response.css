@@ -1,0 +1,19 @@
+@media only screen and (min-width: 1440px) {
+    .body{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .edu{
+        width: 30%;
+    }
+    .skills{
+        width: 30%;
+    }
+    .pro{
+        display: flex;
+        justify-content: space-evenly;
+        height: 300px;
+        
+    }
+}

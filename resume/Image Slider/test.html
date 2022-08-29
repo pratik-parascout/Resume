@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        margin: 6.75% 25%;
+      }
+      .container {
+        height: 100px;
+    width: 360px;
+    position: relative;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    border-radius: 10px;
+    cursor: default;
+    animation: animate 1.5s linear infinite;
+    margin: auto;
+      }
+      @keyframes animate{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>

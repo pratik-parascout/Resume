@@ -1,0 +1,281 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background: #0d1c3d;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .gap{
+    height: 5em;
+  }
+
+  header{
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+  }
+
+  header .nav-bar{
+    position: relative;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    height: 4em;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+    transition: 0.5s ease;
+  }
+
+  header .nav-bar img{
+    height: 59px;
+    width: 59px;
+  }
+
+  .navigation .nav-items a{
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    text-decoration: none;
+
+  }
+
+  .navigation .nav-items a:hover{
+    color: #ff0000;
+    transition: 0.5s ease;
+  }
+
+  span{
+    display: inline-block;
+  }
+
+  .navigation .nav-items a:not(:last-child){
+    margin-right: 50px;
+  }
+
+  section{
+    position: relative;
+    font-size: 1em;
+    padding: 30px 150px;
+    transition: 0.5s ease;
+    transition-property: padding;
+  }
+
+  .content h1{
+    color: rgb(255, 255, 255);
+    font-size: 3.5em;
+    font-weight: 600px;
+  }
+  
+  .content p{
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    margin: 30px 0;
+  }
+
+  ::-webkit-scrollbar{
+    background: wheat;
+    width: 11px;
+    border-radius:2em;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: #454f6d;
+    width: 100%;
+    border-radius: 2em;
+  }
+
+  ::-webkit-scrollbar-thumb:hover{
+    background: #ff0000;
+  }
+   
+  .scroll-indicator-container{
+    width: 100%;
+    height: 5px;
+  }
+
+  .scroll-indicator-bar{
+    background: #aeff00;
+    width:0%;
+    height: 100%;
+    box-shadow: 0 5px 25px rgb(64, 63, 63)
+              0 5px 50px rgb(64, 63, 63);
+  }
+
+  @media screen and(max-width: 1100px) {
+    header.nav-bar{
+      padding: 0 50px;
+    }
+
+    .navigation .nav-items a:not(:last-child){
+      margin-right: 20px;
+    }
+
+    section{
+      padding: 30px 50px;
+      font-size: 0.9em;
+    }
+
+  }
+  
+  @media screen and(max-width: 850px) {
+    header.nav-bar{
+      padding: 0 20px;
+    }
+
+    section{
+      padding: 30px 20px;
+      font-size: 0.8em;
+    }
+  }
+
+  .slider{
+    width: 800px;
+    height: 500px;
+    margin: 0vw auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid black;
+    
+  }
+  
+  .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img{
+    width: 800px;
+    height: 500px;
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: #ff0000;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  #radio5:checked ~ .first{
+    margin-left: -80%;
+  }
+  
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #40D3DC;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #40D3DC;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #40D3DC;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #40D3DC;
+  }
+  
+  #radio5:checked ~ .navigation-auto .auto-btn5{
+    background: #40D3DC;
+  }
+  
+  /* @media screen and(max-width: 1100px){
+    .slider{
+      width: 800px;
+      height: 500px;
+      margin-right: 12.5%;
+      margin-left: 12.5%;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid black;
+      
+    }
+  }
+
+  @media screen and(max-width: 850px){
+    .slider{    
+      width: 800px;
+      height: 500px;
+      margin-right: 12.5%;
+      margin-left: 12.5%;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid black;
+    }
+  } */
